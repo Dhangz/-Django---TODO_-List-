@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+
+
+{% block body %}
+
+<section class="vh-100 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-12 col-xl-10">
+
+        <div class="card mask-custom">
+          <div class="card-body p-4 text-white">
+
+            <div class="text-center pt-3 pb-2">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+                alt="Check" width="60">
+              <h2 class="my-4">Task Add</h2>
+            </div>
+
+
+            
+            
+        
+              <form action="" method="post">
+                  <div class="container">
+                  {% csrf_token %}
+                  {{ forms }}
+
+                  <a class='btn btn-outline-primary' href="{% url 'add-task' %}">Submit</a>
+                  <a class="btn btn-outline-danger" href="{% url 'index' %}">Cancel</a>
+              </div>
+              </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
