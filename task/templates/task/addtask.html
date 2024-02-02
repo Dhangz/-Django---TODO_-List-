@@ -14,21 +14,21 @@
             <div class="text-center pt-3 pb-2">
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
                 alt="Check" width="60">
-              <h2 class="my-4">Task Add</h2>
+              <h2 class="my-4 text-warning">Task Add</h2>
             </div>
 
 
-            
-            
         
               <form action="" method="post">
-                  <div class="container">
+                <div class="container">  
+                  <a class="btn btn-danger mb-5" href="{% url 'index' %}"><i class="fa-solid fa-house"></i> <small>Home</small></a>    
                   {% csrf_token %}
                   {{ forms }}
+                  <br><br>
 
-                  <a class='btn btn-outline-primary' href="{% url 'add-task' %}">Submit</a>
-                  <a class="btn btn-outline-danger" href="{% url 'index' %}">Cancel</a>
-              </div>
+                  <button class='btn btn-primary'><i class="fa-solid fa-location-arrow"></i> <small>Submit</small></button>
+                  
+                </div> 
               </form>
           </div>
         </div>

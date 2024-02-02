@@ -16,9 +16,9 @@ class TaskForm(ModelForm):
     }
 
     widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control bg-transparent mb-3', 'placeholder': 'Title'}),
-            'description': forms.TextInput(attrs={'class': 'form-control bg-transparent mb-3', 'placeholder': 'Decription'}),
-            'priority': forms.Select(attrs={'class': 'form-select bg-transparent mb-3', 'placeholder': 'Priority'}),
+            'title': forms.TextInput(attrs={'class': 'form-control item  bg-transparent mb-3 text-light'}),
+            'description': forms.Textarea(attrs={'class': 'form-control bg-transparent mb-3 text-light', 'style': 'resize: none;', 'rows': '4', 'cols': '20',}),
+            'priority': forms.Select(attrs={'class': 'form-select bg-transparent mb-3'}),
         }
 
 

@@ -9,22 +9,25 @@
       <div class="col-md-12 col-xl-10">
 
         <div class="card mask-custom">
-          <div class="card-body p-4 text-white">
+          <div class="card-body p-4 text-white ">
 
             <div class="text-center pt-3 pb-2">
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
                 alt="Check" width="60">
-              <h2 class="my-4">Task Update</h2>
+              <h2 class="my-4 text-warning">Task Update</h2>
             </div>
+            
 
               <form action="" method="post">
-                  <div class="container">
+                <div class="container">
+                <a class="btn btn-danger mb-5" value='submit' href="{% url 'index' %}"><i class="fa-solid fa-house"></i> <small>Home</small></a>
+            
                   {% csrf_token %}
+        
                   {{ forms }}
-
-                  <a class='btn btn-outline-primary' href="{% url 'add-task' %}">Update</a>
-                  <a class="btn btn-outline-danger" href="{% url 'index' %}">Cancel</a>
-              </div>
+                  <br> <br>   
+                  <button class='btn btn-primary' type='submit'><i class="fa-solid fa-pen"></i> <small>Update</small></button> 
+                </div>  
               </form>
           </div>
         </div>
